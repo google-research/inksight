@@ -1,0 +1,173 @@
+# go/google3metadata
+# proto-file: devtools/metadata/metadata.proto
+# proto-message: MetaData
+# proto-import: devtools/copybara/proto/copybara_presubmit_extension.proto
+
+name: "inksight"
+description: ""  # TODO(inksight): Complete
+
+third_party {
+  last_upgrade_date {
+    year: 2024
+    month: 7
+    day: 16
+  }
+  identifier {
+    type: "PyPI"
+    omission_reason: "Not published on PyPI."
+  }
+  identifier: {
+    type: "Git"
+    value: "http://github.com/google-research/inksight"
+    version: "v1.0"
+    primary_source: true
+  }
+}
+
+presubmit: {
+  review_notify: "inksight-automated+reviews"
+
+  # TODO(inksight): To activate presubmit, you should replace by your
+  # tap/inksight (defined in your `.blueprint` file)
+  check_tests: {
+    failure_status: ERROR
+    project: "inksight"
+  }
+
+  # Checks that files in the changelist do not contain tab characters.
+  check_tabs: {
+    failure_status: ERROR
+  }
+
+  check_trailing_whitespace: {
+    failure_status: ERROR
+  }
+
+  # Presubmit applied during submit
+
+  check_lint: {
+    action: SUBMIT  # Do not activate by default to not block TAP.
+    failure_status: ERROR
+  }
+
+  # Ensures that the string "do not submit" (in all caps) is not present.
+  check_do_not_submit: {
+    action: SUBMIT
+  }
+}
+
+# Register the copy.bara.sky
+exported: {
+  copybara: {
+    config_path: "//depot/google3/third_party/py/inksight/copy.bara.sky"
+  }
+  path_expression: "//depot/google3/third_party/py/inksight/..."
+  remote_location: "https://github.com/google-research/inksight"
+  reason: OPEN_SOURCE
+  description: "Open source inksight"
+  request_url: "http://launch/4325431"
+  owning_team_email: "inksight-automated@google.com"
+}
+
+# TODO(inksight): Uncomment after copy.bara.sky has been set-up. The
+# METADATA have to be submitted first
+# If you're not using Github actions to unittest your project, also remove
+# the two `feedback=feedback_github_to_critique;` written below.
+#
+# # Copybara presubmit
+# presubmit: {
+#   path_expression: "//depot/google3/third_party/py/inksight/..."
+#   # Do not trigger copybara for the following files
+#   path_expression_exclusion: "//depot/.../METADATA"
+#   path_expression_exclusion: "//depot/.../OWNERS"
+#   path_expression_exclusion: "//depot/.../BUILD"
+#   path_expression_exclusion: "//depot/.../*.bzl"
+#   path_expression_exclusion: "//depot/.../google/..."
+
+#   # Ensure that changes contain public notes for git commit messages.
+#   check_description: {
+#     base: {
+#       id: "CopybaraDescription"
+#       disable_tags: "GIT_ORIGIN_REV_ID"
+#       disable_tags: "SKIP_COPYBARA"
+#     }
+
+#     required_regexp:
+#       "("
+#       "(^|\\n)\\s*BEGIN_PUBLIC\\s*?\\n"
+#       "(.*\\n)*"
+#       "\\s*\\S+.*(\\n.*)*\\n"
+#       "\\s*END_PUBLIC\\s*?\\n"
+#       "|"
+#       "(^|\\n)\\s*PUBLIC:(?: )*\\S+"
+#       ")"
+
+#     failure_message:
+#       "\n"
+#       "By running presubmit, this cl will be exported as PR on github. "
+#       "Please add a public commit message to the cl description:\n"
+#       "\n"
+#       "PUBLIC: my public commit msg\n"
+#       "\n"
+#       "OR\n"
+#       "\n"
+#       "BEGIN_PUBLIC\n"
+#       "my public\n"
+#       "commit msg\n"
+#       "END_PUBLIC\n"
+#       "\n"
+#       "If you're certain your change does not produce public changes, the\n"
+#       "message can say 'Internal'.\n"
+#     failure_status: WARNING
+#     required_for_cleanup: false
+#   }
+
+#   check_presubmit_service: {
+#     base: {
+#       id: "Copybara-Review-inksight"
+#       disable_tags: "GIT_ORIGIN_REV_ID"
+#       disable_tags: "SKIP_COPYBARA"
+#     }
+#     action: REVIEW
+#     streaming: true
+#     timeout: 30
+#     failure_status: WARNING
+#     execution_mode: SECONDARY_EXECUTION
+#     include_all_opened_files: true
+#     include_deleted_files: true
+#     registry_id: "copybara-streaming"
+#     extended_options {
+#       [devtools.copybara.service.CopybaraOptions.copybara_options] {
+#         depot_path: "//depot/google3/third_party/py/inksight/copy.bara.sky"
+#         workflow: "presubmit_piper_to_github"
+#         feedback_workflow: "feedback_github_to_critique"
+#         blocking: false
+#         category_suffix: "inksight"
+#       }
+#     }
+#   }
+#   check_presubmit_service: {
+#     base: {
+#       id: "Copybara-Submit-inksight"
+#       disable_tags: "GIT_ORIGIN_REV_ID"
+#       disable_tags: "SKIP_COPYBARA"
+#     }
+#     action: SUBMIT
+#     streaming: true
+#     timeout: 600
+#     failure_status: ERROR
+#     execution_mode: SECONDARY_EXECUTION
+#     include_all_opened_files: true
+#     include_deleted_files: true
+#     registry_id: "copybara-streaming"
+#     extended_options {
+#       [devtools.copybara.service.CopybaraOptions.copybara_options] {
+#         depot_path: "//depot/google3/third_party/py/inksight/copy.bara.sky"
+#         workflow: "presubmit_piper_to_github"
+#         feedback_workflow: "feedback_github_to_critique"
+#         blocking: true
+#         category_suffix: "inksight"
+#       }
+#     }
+#   }
+# }
