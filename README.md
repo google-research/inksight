@@ -77,7 +77,6 @@ The code in this repository is released under the [Apache 2 license](https://git
 ---
 
 ## Citation
-## 📃 Citation
 
 If you find our work useful for your research and applications, please cite using this BibTeX:
 
