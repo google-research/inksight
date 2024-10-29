@@ -18,13 +18,16 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2402.05804">
-    <img src="https://img.shields.io/badge/📄_Read_the_Paper-4CAF50?style=for-the-badge&logo=arxiv&logoColor=white" alt="gRead the Paper">
+    <img src="https://img.shields.io/badge/📄_Read_the_Paper-4CAF50?style=for-the-badge&logo=arxiv&logoColor=white" alt="Read the Paper">
   </a> 
   <a href="https://huggingface.co/spaces/Derendering/Model-Output-Playground">
     <img src="https://img.shields.io/badge/🚀_Try_Demo_on_Hugging_Face-007acc?style=for-the-badge&logo=huggingface&logoColor=white" alt="Try Demo on Hugging Face">
   </a> 
   <a href="https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/">
     <img src="https://img.shields.io/badge/🌐_Google_Research_Blog-333333?style=for-the-badge&logo=google&logoColor=white" alt="Google Research Blog">
+  </a>
+  <a href="https://charlieleee.github.io/publication/inksight/">
+    <img src="https://img.shields.io/badge/ℹ️_Info-FFA500?style=for-the-badge&logo=info&logoColor=white" alt="Info">
   </a>
 </p>
 
@@ -33,20 +36,25 @@
   <img src="figures/derender_diagram.svg" alt="Derender Diagram" width="100%">
 </p>
 
+<p align="center">
+  <img src="figures/inksight.gif" alt="Inksight" width="100%">
+</p>
+
 </div>
 
 ---
 
 ## News
-**2024-10** The <strong><font color="green">Google Research Blog</font></strong> is out! Check it out [here](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/).
 
-**2024-2** The <strong><font color="green">Hugging Face Demo Page</font></strong> is live! Check it out [here](https://huggingface.co/spaces/Derendering/Model-Output-Playground).
+- **October 2024**: Our work is now featured on the **[Google Research Blog](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/)**! 
 
+- **February 2024**: The **[InkSight Demo on Hugging Face](https://huggingface.co/spaces/Derendering/Model-Output-Playground)** is live!
 
 
 ---
 
 ## Releases
+We provide open resources for InkSight public version model. Choose the options that best fit your needs:
 
 - [Public version model for CPU/GPU inference](https://storage.googleapis.com/derendering_model/small-p-cpu.zip) (494 MB)
 - [Public version model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip) (494 MB)
@@ -62,6 +70,6 @@ The code in this repository is released under the [Apache 2 license](https://git
 
 ---
 
-## Other
+## Disclaimer
 
-*This is not an officially supported Google product.*
+*Please note: This is not an officially supported Google product.*
