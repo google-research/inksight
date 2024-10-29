@@ -73,3 +73,19 @@ The code in this repository is released under the [Apache 2 license](https://git
 ## Disclaimer
 
 *Please note: This is not an officially supported Google product.*
+
+---
+
+## Citation
+## 📃 Citation
+
+If you find our work useful for your research and applications, please cite using this BibTeX:
+
+```bibtex
+@article{mitrevski2024inksight,
+  title={InkSight: Offline-to-Online Handwriting Conversion by Learning to Read and Write},
+  author={Mitrevski, Blagoj and Rak, Arina and Schnitzler, Julian and Li, Chengkun and Maksai, Andrii and Berent, Jesse and Musat, Claudiu},
+  journal={arXiv preprint arXiv:2402.05804},
+  year={2024}
+}
+```
