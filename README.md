@@ -53,6 +53,26 @@
 
 ---
 
+
+## Run Gradio 🤗 Playground Locally
+
+To set up and run the Gradio <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> Playground locally, you can use the following steps:
+```bash
+# Clone the huggingface space
+git clone https://huggingface.co/spaces/Derendering/Model-Output-Playground
+
+# Install the dependencies (skip if you have them already)
+pip install gradio gdown
+```
+
+Then inside the cloned directory, you can run the following command to interact with the playground:
+```bash
+# Run the Gradio Playground
+python app.py
+```
+
+---
+
 ## Releases
 We provide open resources for InkSight public version model. Choose the options that best fit your needs:
 
