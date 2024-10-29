@@ -79,7 +79,7 @@ We provide open resources for InkSight public version model. Choose the options 
 - [Public version model for CPU/GPU inference](https://storage.googleapis.com/derendering_model/small-p-cpu.zip) (494 MB)
 - [Public version model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip) (494 MB)
 - [Supplementary material for the paper](https://storage.googleapis.com/derendering_model/derendering_supp.zip). This is used in the example colab linked below.
-- [Example code](colab.ipynb) in the form of a [Colab](https://colab.research.google.com/) notebook that showcases model inference results on several samples and example code to run the inference.
+- [Example code](colab.ipynb) in the form of a [Colab](https://colab.research.google.com/) notebook that showcases model inference results on several samples and example code to run the inference, [open in colab](https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb).
 - [Samples of model outputs](figures/) of huggingface demo.
 
 ---
