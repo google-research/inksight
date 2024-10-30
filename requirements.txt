@@ -1,0 +1,13 @@
+gdown==5.2.0
+gradio==5.4.0
+ipython==8.12.3
+matplotlib==3.9.2
+numpy==2.1.2
+Pillow==11.0.0
+protobuf==5.28.3
+pytesseract==0.3.13
+Requests==2.32.3
+tensorflow==2.15.0
+tensorflow_text==2.15.0
+tqdm==4.66.6
+
