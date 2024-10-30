@@ -46,6 +46,8 @@
 
 ## News
 
+- **October 2024**: We release Small-p on [Hugging Face](https://huggingface.co/Derendering/InkSight-Small-p)!
+
 - **October 2024**: Our work is now featured on the **[Google Research Blog](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/)**! 
 
 - **February 2024**: The **[InkSight Demo on Hugging Face](https://huggingface.co/spaces/Derendering/Model-Output-Playground)** is live!
@@ -77,6 +79,7 @@ python app.py
 We provide open resources for InkSight public version model. Choose the options that best fit your needs:
 
 - [Public version model for CPU/GPU inference](https://storage.googleapis.com/derendering_model/small-p-cpu.zip) (494 MB)
+- Hugging Face model for CPU/GPU inference: [InkSight Small-p](https://huggingface.co/Derendering/InkSight-Small-p).
 - [Public version model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip) (494 MB)
 - [Supplementary material for the paper](https://storage.googleapis.com/derendering_model/derendering_supp.zip). This is used in the example colab linked below, which automatically downloads this content.
 - [Example code](colab.ipynb) in the form of a Colab notebook that showcases model inference results on several samples and example code to run the inference. <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
