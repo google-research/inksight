@@ -78,8 +78,9 @@ python app.py
 ## Releases
 
 <div style="font-size: 16px; margin-top: 20px;">
-    <strong style="color: red;">Notice:</strong> Please use TensorFlow and tensorflow-text between version 2.15.0 and 2.17.0. Versions later than 2.17.0 may lead to unexpected behavior. We are currently investigating these issues.
+    <strong>Notice:</strong> Please use TensorFlow and tensorflow-text between version 2.15.0 and 2.17.0. Versions later than 2.17.0 may lead to unexpected behavior. We are currently investigating these issues.
 </div>
+<br></br>
 
 We provide open resources for InkSight public version model. Choose the options that best fit your needs:
 
