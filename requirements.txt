@@ -7,6 +7,6 @@ Pillow==11.0.0
 protobuf==5.28.3
 pytesseract==0.3.13
 Requests==2.32.3
-tensorflow==2.18.0
-tensorflow_text>=1.0.0
+tensorflow==2.15.0
+tensorflow_text==2.15.0
 tqdm==4.66.6
