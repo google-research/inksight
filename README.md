@@ -46,7 +46,7 @@
 
 ## News
 
-- **October 2024**: We release Small-p on [Hugging Face](https://huggingface.co/Derendering/InkSight-Small-p)!
+- **October 2024**: We release Small-p on **[Hugging Face](https://huggingface.co/Derendering/InkSight-Small-p)**!
 
 - **October 2024**: Our work is now featured on the **[Google Research Blog](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/)**! 
 
@@ -59,15 +59,17 @@
 ## Run Gradio 🤗 Playground Locally
 
 To set up and run the Gradio <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> Playground locally, you can use the following steps:
+
 ```bash
 # Clone the huggingface space
 git clone https://huggingface.co/spaces/Derendering/Model-Output-Playground
 
-# Install the dependencies (skip if you have them already)
-pip install gradio gdown
+# Install the dependencies
+cd Model-Output-Playground
+pip install -r requirements.txt
 ```
 
-Then inside the cloned directory, you can run the following command to interact with the playground:
+Then you can run the following command to interact with the playground:
 ```bash
 # Run the Gradio Playground
 python app.py
