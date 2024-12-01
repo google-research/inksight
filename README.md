@@ -19,17 +19,20 @@
 </p>
 
 <p align="center">
+  <a href="https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/">
+    <img src="https://img.shields.io/badge/Google_Research_Blog-333333?&logo=google&logoColor=white" alt="Google Research Blog">
+  </a>
   <a href="https://arxiv.org/abs/2402.05804">
-    <img src="https://img.shields.io/badge/Read_the_Paper-4CAF50?style=for-the-badge&logo=arxiv&logoColor=white" alt="Read the Paper">
+    <img src="https://img.shields.io/badge/Read_the_Paper-4CAF50?&logo=arxiv&logoColor=white" alt="Read the Paper">
   </a> 
   <a href="https://huggingface.co/spaces/Derendering/Model-Output-Playground">
-    <img src="https://img.shields.io/badge/Try_Demo_on_Hugging_Face-007acc?style=for-the-badge&logo=huggingface&logoColor=white" alt="Try Demo on Hugging Face">
+    <img src="https://img.shields.io/badge/Output_Playground-007acc?&logo=huggingface&logoColor=white" alt="Try Demo on Hugging Face">
   </a> 
-  <a href="https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/">
-    <img src="https://img.shields.io/badge/Google_Research_Blog-333333?style=for-the-badge&logo=google&logoColor=white" alt="Google Research Blog">
+    <a href="https://charlieleee.github.io/publication/inksight/">
+    <img src="https://img.shields.io/badge/🔗_Project_Page-FFA500?&logo=link&logoColor=white" alt="Project Page">
   </a>
-  <a href="https://charlieleee.github.io/publication/inksight/">
-    <img src="https://img.shields.io/badge/🔗_Project_Page-FFA500?style=for-the-badge&logo=link&logoColor=white" alt="Project Page">
+  <a href="https://huggingface.co/datasets/Derendering/InkSight-Derenderings">
+    <img src="https://img.shields.io/badge/Dataset-InkSight-40AF40?&logo=huggingface&logoColor=white" alt="Hugging Face Dataset">
   </a>
 </p>
 
