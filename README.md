@@ -34,6 +34,9 @@
   <a href="https://huggingface.co/datasets/Derendering/InkSight-Derenderings">
     <img src="https://img.shields.io/badge/Dataset-InkSight-40AF40?&logo=huggingface&logoColor=white" alt="Hugging Face Dataset">
   </a>
+  <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb">
+    <img src="https://img.shields.io/badge/Example_Colab-F9AB00?&logo=googlecolab&logoColor=white" alt="Example colab">
+  </a>
 </p>
 
 ---
@@ -57,6 +60,21 @@ InkSight is an offline-to-online handwriting conversion system that transforms p
 </p>
 
 </div>
+
+## Releases
+> **:warning: Notice:** Please use TensorFlow and tensorflow-text between version 2.15.0 and 2.17.0. Versions later than 2.17.0 may lead to unexpected behavior. We are currently investigating these issues.
+
+
+We provide open resources for InkSight public version model. Choose the options that best fit your needs:
+
+- Model weights:
+  - Public version [Small-p model for CPU/GPU inference](https://huggingface.co/Derendering/InkSight-Small-p)
+  - Public version [Small-p model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip)
+- A [dataset](docs/dataset.md) containing subsets of:
+  - Model-generated samples in universal `inkML` format
+  - Human expert digital ink traces in `npy` format
+- [Example inference code](colab.ipynb) that showcases both word-level inference and full-page inference implemented with open-source [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+- [Samples](figures/) of model outputs.
 
 
 ## News
@@ -99,24 +117,6 @@ Then you can run the following command to interact with the playground:
 # Run the Gradio Playground
 python app.py
 ```
-
-
-
-## Releases
-> **:warning: Notice:** Please use TensorFlow and tensorflow-text between version 2.15.0 and 2.17.0. Versions later than 2.17.0 may lead to unexpected behavior. We are currently investigating these issues.
-
-
-We provide open resources for InkSight public version model. Choose the options that best fit your needs:
-
-- Model weights:
-  - Public version [Small-p model for CPU/GPU inference](https://huggingface.co/Derendering/InkSight-Small-p)
-  - Public version [Small-p model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip)
-- A [dataset](docs/dataset.md) containing subsets of:
-  - Model-generated samples in universal `inkML` format
-  - Human expert digital ink traces in `npy` format
-- [Example inference code](colab.ipynb) that showcases both word-level inference and full-page inference implemented with open-source [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
-- [Samples](figures/) of model outputs.
-
 
 
 ## Licenses
