@@ -73,7 +73,7 @@ We provide open resources for InkSight public version model. Choose the options 
 - A [dataset](docs/dataset.md) containing subsets of:
   - Model-generated samples in universal `inkML` format
   - Human expert digital ink traces in `npy` format
-- [Example inference code](colab.ipynb) that showcases both word-level inference and full-page inference implemented with open-source [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+- [Example inference code](colab.ipynb): Demonstrates both word-level and full-page text inference using free, open-source alternatives to the [Google Cloud Vision Handwriting Text Detection API](https://cloud.google.com/vision/docs/handwriting). The implementation supports [docTR](https://github.com/mindee/doctr) and [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 - [Samples](figures/) of model outputs.
 
 
