@@ -1,0 +1,11 @@
+[project]
+name = "inksight"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-doctr[tf,viz]==0.10.0",
+    "tensorflow-text==2.17.0",
+    "tensorflow[and-cuda]==2.17.0",
+]
