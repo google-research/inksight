@@ -2,7 +2,7 @@
   <img src="figures/cor.svg" alt="Organization Icon" style="max-width: 30%; min-width: 240px; vertical-align: middle; margin: 0 auto;">
 </p>
 
-# InkSight: Offline-to-Online Handwriting Conversion by Learning to Read and Write
+# InkSight: Offline-to-Online Handwriting Conversion by Teaching Vision-Language Models to Read and Write
 
 <p align="center" style="font-size: 16px;">
     <a href="https://scholar.google.com/citations?user=L6rrZxAAAAAJ&hl=en"><strong>Blagoj Mitrevski&dagger;</strong></a> &bull; 
@@ -19,23 +19,23 @@
 </p>
 
 <p align="center">
-  <a href="https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/">
-    <img src="https://img.shields.io/badge/Google_Research_Blog-333333?&logo=google&logoColor=white" alt="Google Research Blog">
+  <a href="https://openreview.net/forum?id=pSyUfV5BqA">
+    <img src="https://img.shields.io/badge/Paper-TMLR-red.svg" alt="Paper">
   </a>
   <a href="https://arxiv.org/abs/2402.05804">
-    <img src="https://img.shields.io/badge/Read_the_Paper-4CAF50?&logo=arxiv&logoColor=white" alt="Read the Paper">
-  </a> 
-  <a href="https://huggingface.co/spaces/Derendering/Model-Output-Playground">
-    <img src="https://img.shields.io/badge/Output_Playground-007acc?&logo=huggingface&logoColor=white" alt="Try Demo on Hugging Face">
-  </a> 
-    <a href="https://charlieleee.github.io/publication/inksight/">
-    <img src="https://img.shields.io/badge/🔗_Project_Page-FFA500?&logo=link&logoColor=white" alt="Project Page">
+    <img src="https://img.shields.io/badge/arXiv-2402.05804-b31b1b.svg" alt="arXiv">
   </a>
-  <a href="https://huggingface.co/datasets/Derendering/InkSight-Derenderings">
-    <img src="https://img.shields.io/badge/Dataset-InkSight-40AF40?&logo=huggingface&logoColor=white" alt="Hugging Face Dataset">
+  <a href="https://charlieleee.github.io/publication/inksight/">
+    <img src="https://img.shields.io/badge/Project-Page-purple.svg" alt="Project Page">
+  </a>
+  <a href="https://huggingface.co/spaces/Derendering/Model-Output-Playground">
+    <img src="https://img.shields.io/badge/Demo-HuggingFace-yellow.svg" alt="Demo">
   </a>
   <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb">
-    <img src="https://img.shields.io/badge/Example_Colab-F9AB00?&logo=googlecolab&logoColor=white" alt="Example colab">
+    <img src="https://img.shields.io/badge/Colab-Example-blue.svg" alt="Colab">
+  </a>
+  <a href="https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/">
+    <img src="https://img.shields.io/badge/Google-Research%20Blog-4285F4.svg" alt="Google Research Blog">
   </a>
 </p>
 
@@ -50,90 +50,102 @@
 
 ## Overview
 
-InkSight is an offline-to-online handwriting conversion system that transforms photos of handwritten text into digital ink through a Vision Transformer (ViT) and mT5 encoder-decoder architecture. By combining reading and writing priors in a multi-task training framework, our models process handwritten content without requiring specialized equipment, handling diverse writing styles and backgrounds. The system supports both word-level and full-page conversion, enabling practical digitization of physical notes into searchable, editable digital formats. In this repository we provide the model weights of Small-p, dataset, and example inference code (listed in the [releases section](#releases)).
+InkSight is an offline-to-online handwriting conversion system that transforms photos of handwritten text into digital ink through a Vision Transformer (ViT) and mT5 encoder-decoder architecture. By combining reading and writing priors in a multi-task training framework, our models process handwritten content without requiring specialized equipment, handling diverse writing styles and backgrounds. The system supports both word-level and full-page conversion, enabling practical digitization of physical notes into searchable, editable digital formats. In this repository we provide the model weights of Small-p, dataset, and example inference code.
+
+**Key capabilities:**
+- Offline-to-online handwriting conversion from photos
+- Multi-language support with robust background handling
+- Word-level and full-page text processing
+- Vector-based digital ink output for editing and search
 
 <div>
 <p align="center">
   <img src="figures/derender_diagram.svg" alt="Derender Diagram" width="100%">
 <br>
-  <em>InkSight system diagram (<a href="figures/full_diagram.gif">gif version</a>)</em>
+  <em>InkSight system architecture (<a href="figures/full_diagram.gif">animated version</a>)</em>
 </p>
-
 </div>
 
-## Releases
-> **:warning: Notice:** Please use TensorFlow and tensorflow-text between version 2.15.0 and 2.17.0. Versions later than 2.17.0 may lead to unexpected behavior. We are currently investigating these issues.
+## Latest Updates
 
+- **June 2025**: Paper accepted to **[TMLR (Transactions on Machine Learning Research)](https://openreview.net/forum?id=pSyUfV5BqA)**
+- **October 2024**: Model weights and dataset released on [Hugging Face](https://huggingface.co/Derendering/InkSight-Small-p)
+- **October 2024**: Featured on [Google Research Blog](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/)
+- **February 2024**: Interactive [demo](https://huggingface.co/spaces/Derendering/Model-Output-Playground) launched
 
-We provide open resources for InkSight public version model. Choose the options that best fit your needs:
+## Quick Start
 
-- Model weights:
-  - Public version [Small-p model for CPU/GPU inference](https://huggingface.co/Derendering/InkSight-Small-p)
-  - Public version [Small-p model for TPU inference](https://storage.googleapis.com/derendering_model/small-p-tpu.zip)
-- A [dataset](docs/dataset.md) containing subsets of:
-  - Model-generated samples in universal `inkML` format
-  - Human expert digital ink traces in `npy` format
-- [Example inference code](colab.ipynb): Demonstrates both word-level and full-page text inference using free, open-source alternatives to the [Google Cloud Vision Handwriting Text Detection API](https://cloud.google.com/vision/docs/handwriting). The implementation supports [docTR](https://github.com/mindee/doctr) and [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). <a href="https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
-- [Samples](figures/) of model outputs.
+### Online Demo
+Try InkSight on Hugging Face Space: [**Interactive Demo**](https://huggingface.co/spaces/Derendering/Model-Output-Playground)
 
+### Jupyter Notebook
+Explore our [**example notebook**](https://githubtocolab.com/google-research/inksight/blob/main/colab.ipynb) with step-by-step inference examples.
 
-## News
+### Dataset
+Access our comprehensive dataset: [**InkSight Dataset on Hugging Face**](https://huggingface.co/datasets/Derendering/InkSight-Derenderings)
 
-- **October 2024**: We release [**Small-p model weights**](https://huggingface.co/Derendering/InkSight-Small-p) and our [**dataset**](https://huggingface.co/datasets/Derendering/InkSight-Derenderings) on Hugging Face.
-- **October 2024**: Our work is now featured on the **[Google Research Blog](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/)**! 
+## Installation
 
-- **February 2024**: The **[InkSight Demo on Hugging Face](https://huggingface.co/spaces/Derendering/Model-Output-Playground)** is live!
+### Using uv (Recommended)
 
+[uv](https://docs.astral.sh/uv/) is a fast Python package and project manager that provides excellent dependency resolution and virtual environment management.
 
-## GPU Inference Environment Setup with Conda
-To set up the environment and run the model inference locally on GPU, you can use the following steps:
 ```bash
-# Clone the repository
+# Install uv if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and set up the project
 git clone https://github.com/google-research/inksight.git
 cd inksight
+uv sync
+```
 
-# Create and activate conda environment
+### Using Conda
+
+```bash
+git clone https://github.com/google-research/inksight.git
+cd inksight
 conda env create -f environment.yml
 conda activate inksight
 ```
-If you encounter any issues during setup or running the model, please open an issue with details about your environment and the error message.
 
+> **Important**: Use TensorFlow 2.15.0-2.17.0. Later versions may cause unexpected behavior.
 
-## Run Gradio 🤗 Playground Locally
+## Local Playground Setup
 
-To set up and run the Gradio <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> Playground locally, you can use the following steps:
+For development or custom inference, run the Gradio playground locally:
 
 ```bash
-# Clone the huggingface space
 git clone https://huggingface.co/spaces/Derendering/Model-Output-Playground
-
-# Install the dependencies
 cd Model-Output-Playground
 pip install -r requirements.txt
-```
-
-Then you can run the following command to interact with the playground:
-```bash
-# Run the Gradio Playground
 python app.py
 ```
 
 
-## Licenses
-![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg) 
-The code in this repository is released under the [Apache 2 license](https://github.com/google-research/google-research/blob/master/LICENSE).
+## Resources
 
+### 📊 Dataset
+- [**InkSight Dataset**](https://huggingface.co/datasets/Derendering/InkSight-Derenderings) - Comprehensive collection of model outputs and expert traces
+- [**Dataset Documentation**](docs/dataset.md) - Detailed dataset description, format specifications, and usage guidelines
 
+### 🤖 Models
+- [**Small-p model (CPU/GPU)**](https://huggingface.co/Derendering/InkSight-Small-p) - Optimized for standard inference
+- [**Small-p model (TPU)**](https://storage.googleapis.com/derendering_model/small-p-tpu.zip) - TPU-optimized version
 
-## Disclaimer
+### 💻 Code Examples
+- [**Inference Notebook**](colab.ipynb) - Word and page-level inference examples
+- [**Sample Outputs**](figures/) - Visual examples of model results
 
-*Please note: This is not an officially supported Google product.*
+The inference code demonstrates both word-level and full-page text processing using open-source alternatives to commercial OCR APIs, including support for [docTR](https://github.com/mindee/doctr) and [Tesseract OCR](https://github.com/tesseract-ocr/tesseract).
 
+## License and Citation
 
+### License
+This code is released under the [Apache 2.0 License](https://github.com/google-research/google-research/blob/master/LICENSE).
 
-## Citation
-
-If you find our code or dataset useful for your research and applications, please cite using BibTeX:
+### Citation
+If you use InkSight in your research, please cite our paper:
 
 ```bibtex
 @article{mitrevski2024inksight,
@@ -143,3 +155,11 @@ If you find our code or dataset useful for your research and applications, pleas
   year={2024}
 }
 ```
+
+### Additional Resources
+- [**Project Page**](https://charlieleee.github.io/publication/inksight/) - Comprehensive project overview with examples and technical details
+- [**Google Research Blog**](https://research.google/blog/a-return-to-hand-written-notes-by-learning-to-read-write/) - Featured article explaining the research
+
+---
+
+*This is not an officially supported Google product.*
