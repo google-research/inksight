@@ -1,0 +1,42 @@
+[project]
+name = "inksight"
+version = "0.1.0"
+description = "Offline-to-Online Handwriting Conversion by Teaching Vision-Language Models to Read and Write"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["handwriting", "computer vision", "machine learning", "OCR", "digital ink", "transformer", "vision-language"]
+authors = [
+    {name = "Google"},
+]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Graphics :: Capture :: Scanners",
+    "Topic :: Text Processing :: Markup",
+]
+dependencies = [
+    "gdown>=5.2.0",
+    "jupyter>=1.1.1",
+    "pytesseract>=0.3.13",
+    "python-doctr[tf,viz]==0.10.0",
+    "tensorflow-text==2.17.0",
+    "tensorflow[and-cuda]==2.17.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/google-research/inksight"
+"Project Page" = "https://charlieleee.github.io/publication/inksight/"
+"Paper (TMLR)" = "https://openreview.net/forum?id=pSyUfV5BqA"
+"Paper (arXiv)" = "https://arxiv.org/abs/2402.05804"
+"Demo" = "https://huggingface.co/spaces/Derendering/Model-Output-Playground"
+"Dataset" = "https://huggingface.co/datasets/Derendering/InkSight-Derenderings"
+"Model Weights" = "https://huggingface.co/Derendering/InkSight-Small-p"
+Repository = "https://github.com/google-research/inksight"
+"Bug Tracker" = "https://github.com/google-research/inksight/issues"
