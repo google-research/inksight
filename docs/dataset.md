@@ -88,10 +88,14 @@ python visualize_dataset.py --dataset HierText --num_samples 3 --model Small-i
 If you use this dataset, please cite:
 
 ```bibtex
-@article{mitrevski2024inksight,
-  title={InkSight: Offline-to-Online Handwriting Conversion by Learning to Read and Write},
-  author={Mitrevski, Blagoj and Rak, Arina and Schnitzler, Julian and Li, Chengkun and Maksai, Andrii and Berent, Jesse and Musat, Claudiu},
-  journal={arXiv preprint arXiv:2402.05804},
-  year={2024}
+@article{
+mitrevski2025inksight,
+title={InkSight: Offline-to-Online Handwriting Conversion by Teaching Vision-Language Models to Read and Write},
+author={Blagoj Mitrevski and Arina Rak and Julian Schnitzler and Chengkun Li and Andrii Maksai and Jesse Berent and Claudiu Cristian Musat},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2025},
+url={https://openreview.net/forum?id=pSyUfV5BqA},
+note={}
 }
 ```
