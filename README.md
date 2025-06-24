@@ -148,11 +148,15 @@ This code is released under the [Apache 2.0 License](https://github.com/google-r
 If you use InkSight in your research, please cite our paper:
 
 ```bibtex
-@article{mitrevski2024inksight,
-  title={InkSight: Offline-to-Online Handwriting Conversion by Learning to Read and Write},
-  author={Mitrevski, Blagoj and Rak, Arina and Schnitzler, Julian and Li, Chengkun and Maksai, Andrii and Berent, Jesse and Musat, Claudiu},
-  journal={arXiv preprint arXiv:2402.05804},
-  year={2024}
+@article{
+mitrevski2025inksight,
+title={InkSight: Offline-to-Online Handwriting Conversion by Teaching Vision-Language Models to Read and Write},
+author={Blagoj Mitrevski and Arina Rak and Julian Schnitzler and Chengkun Li and Andrii Maksai and Jesse Berent and Claudiu Cristian Musat},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2025},
+url={https://openreview.net/forum?id=pSyUfV5BqA},
+note={}
 }
 ```
 
