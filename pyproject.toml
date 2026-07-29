@@ -3,7 +3,7 @@ name = "inksight"
 version = "0.1.0"
 description = "Offline-to-Online Handwriting Conversion by Teaching Vision-Language Models to Read and Write"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 keywords = ["handwriting", "computer vision", "machine learning", "OCR", "digital ink", "transformer", "vision-language"]
 authors = [
     {name = "Google"},
@@ -26,8 +26,8 @@ dependencies = [
     "jupyter>=1.1.1",
     "pytesseract>=0.3.13",
     "python-doctr[tf,viz]==0.10.0",
-    "tensorflow-text==2.17.0",
-    "tensorflow[and-cuda]==2.17.0",
+    "tensorflow-text==2.20.1",
+    "tensorflow[and-cuda]==2.20.0",
 ]
 
 [project.urls]

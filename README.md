@@ -98,6 +98,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 git clone https://github.com/google-research/inksight.git
 cd inksight
 uv sync
+
+# Start the configured notebook
+uv run jupyter notebook colab.ipynb
 ```
 
 ### Using Conda
@@ -109,7 +112,15 @@ conda env create -f environment.yml
 conda activate inksight
 ```
 
-> **Important**: Use TensorFlow 2.15.0-2.17.0. Later versions may cause unexpected behavior.
+The uv environment uses TensorFlow 2.20 and TensorFlow Text 2.20. The
+notebook configures TensorFlow before its first import to preserve the pre-2.18
+XLA GEMM lowering and deterministic autotuning used by the released checkpoint.
+For the same configuration in a Python script, import TensorFlow through the
+InkSight utility:
+
+```python
+from utils.tensorflow import tf
+```
 
 ## Local Playground Setup
 
