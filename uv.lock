@@ -1,12 +1,12 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11, <3.14"
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform == 'darwin'",
-    "python_full_version == '3.12.*' and sys_platform == 'darwin'",
     "python_full_version >= '3.13' and platform_machine == 'aarch64' and sys_platform == 'linux'",
-    "python_full_version == '3.12.*' and platform_machine == 'aarch64' and sys_platform == 'linux'",
     "(python_full_version >= '3.13' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version >= '3.13' and sys_platform != 'darwin' and sys_platform != 'linux')",
+    "python_full_version == '3.12.*' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'aarch64' and sys_platform == 'linux'",
     "(python_full_version == '3.12.*' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version == '3.12.*' and sys_platform != 'darwin' and sys_platform != 'linux')",
     "python_full_version < '3.12' and sys_platform == 'darwin'",
     "python_full_version < '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
@@ -1005,7 +1005,7 @@ wheels = [
 
 [[package]]
 name = "jupyterlab"
-version = "4.4.3"
+version = "4.5.11"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "async-lru" },
@@ -1021,10 +1021,11 @@ dependencies = [
     { name = "setuptools" },
     { name = "tornado" },
     { name = "traitlets" },
+    { name = "typing-extensions", marker = "python_full_version < '3.12'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d3/2d/d1678dcf2db66cb4a38a80d9e5fcf48c349f3ac12f2d38882993353ae768/jupyterlab-4.4.3.tar.gz", hash = "sha256:a94c32fd7f8b93e82a49dc70a6ec45a5c18281ca2a7228d12765e4e210e5bca2", size = 23032376, upload-time = "2025-05-26T11:18:00.996Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ec/c5/2bf995b906cd83581dbb3435ac1dc5d1cb1fab9de233735a99b3f5be8d51/jupyterlab-4.5.11.tar.gz", hash = "sha256:6534bb389d31f5ceb4357b15d2c002206063b51ef9c1911a079f537749215ddc", size = 24000794, upload-time = "2026-09-21T16:19:46.398Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c6/4d/7dd5c2ffbb960930452a031dc8410746183c924580f2ab4e68ceb5b3043f/jupyterlab-4.4.3-py3-none-any.whl", hash = "sha256:164302f6d4b6c44773dfc38d585665a4db401a16e5296c37df5cba63904fbdea", size = 12295480, upload-time = "2025-05-26T11:17:56.607Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/f2/a2f50a928fed0b8529dd80c4eb7d3aebe92f9658bfb3b63dce77fb5f1b95/jupyterlab-4.5.11-py3-none-any.whl", hash = "sha256:e23e3d76b92ad172b529fb6faf91e3edd264ffdff65b543949eb85daf7f8b113", size = 12455673, upload-time = "2026-09-21T16:19:41.937Z" },
 ]
 
 [[package]]
@@ -1038,7 +1039,7 @@ wheels = [
 
 [[package]]
 name = "jupyterlab-server"
-version = "2.27.3"
+version = "2.28.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "babel" },
@@ -1049,9 +1050,9 @@ dependencies = [
     { name = "packaging" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0a/c9/a883ce65eb27905ce77ace410d83587c82ea64dc85a48d1f7ed52bcfa68d/jupyterlab_server-2.27.3.tar.gz", hash = "sha256:eb36caca59e74471988f0ae25c77945610b887f777255aa21f8065def9e51ed4", size = 76173, upload-time = "2024-07-16T17:02:04.149Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/16/c5/08946a10b81bd64408d8b78cb352e17fe52d3ee11c2aef00a0f06e506938/jupyterlab_server-2.28.1.tar.gz", hash = "sha256:0c3c2418d51021ce280916e63dfe4cba8386b4e2787be5c25433c98f560ddb31", size = 78141, upload-time = "2026-09-15T19:22:09.935Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/54/09/2032e7d15c544a0e3cd831c51d77a8ca57f7555b2e1b2922142eddb02a84/jupyterlab_server-2.27.3-py3-none-any.whl", hash = "sha256:e697488f66c3db49df675158a77b3b017520d772c6e1548c7d9bcc5df7944ee4", size = 59700, upload-time = "2024-07-16T17:02:01.115Z" },
+    { url = "https://files.pythonhosted.org/packages/23/d3/996332fe24f3c2458b9c353b998570dfa2631763e9a8674ba3f94c0877d0/jupyterlab_server-2.28.1-py3-none-any.whl", hash = "sha256:4bd36c7c11d872e15cefa4951e12380a47e6901687165332dd50a007cb367ad9", size = 60197, upload-time = "2026-09-15T19:22:08.201Z" },
 ]
 
 [[package]]
@@ -1437,7 +1438,7 @@ wheels = [
 
 [[package]]
 name = "notebook"
-version = "7.4.3"
+version = "7.5.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jupyter-server" },
@@ -1446,9 +1447,9 @@ dependencies = [
     { name = "notebook-shim" },
     { name = "tornado" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/dc/21/4f83b15e483da4f4f63928edd0cb08b6e7d33f8a15c23b116a90c44c6235/notebook-7.4.3.tar.gz", hash = "sha256:a1567481cd3853f2610ee0ecf5dfa12bb508e878ee8f92152c134ef7f0568a76", size = 13881668, upload-time = "2025-05-26T14:27:21.656Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/19/d71e2883bbe8e238a2290b15e8adc3fc223bc1b5bc5d4584c20918ff94d3/notebook-7.5.8.tar.gz", hash = "sha256:3a32579666d1c3f9725dd94c95d8d07b9cae88124c9516cc9262fa798e411e90", size = 14174934, upload-time = "2026-10-05T06:23:49.14Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/76/1b/16c809d799e3ddd7a97c8b43734f79624b74ddef9707e7d92275a13777bc/notebook-7.4.3-py3-none-any.whl", hash = "sha256:9cdeee954e04101cadb195d90e2ab62b7c9286c1d4f858bf3bb54e40df16c0c3", size = 14286402, upload-time = "2025-05-26T14:27:17.339Z" },
+    { url = "https://files.pythonhosted.org/packages/26/c7/45602f74bba9d3b102fe2652c0eacdd9ad288248e37fdc9b0884d24087dd/notebook-7.5.8-py3-none-any.whl", hash = "sha256:71e815b89f3f241d72407497362a851b1e0931b3505adddabdd10f0ff6840217", size = 14586628, upload-time = "2026-10-05T06:23:45.135Z" },
 ]
 
 [[package]]
@@ -2432,7 +2433,7 @@ resolution-markers = [
     "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux')",
 ]
 dependencies = [
-    { name = "numpy", version = "1.26.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.13'" },
+    { name = "numpy", version = "1.26.4", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/0f/37/6964b830433e654ec7485e45a00fc9a27cf868d622838f6b6d9c5ec0d532/scipy-1.15.3.tar.gz", hash = "sha256:eae3cf522bc7df64b42cad3925c876e1b0b6c35c1337c93e12c0f366f55b0eaf", size = 59419214, upload-time = "2025-05-08T16:13:05.955Z" }
 wheels = [
@@ -2484,7 +2485,7 @@ resolution-markers = [
     "(python_full_version >= '3.13' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version >= '3.13' and sys_platform != 'darwin' and sys_platform != 'linux')",
 ]
 dependencies = [
-    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13'" },
+    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a7/25/c2700dfaf6442b4effaa91af24ebce5dc9d31bb4a69706313aae70d72cd0/scipy-1.18.0.tar.gz", hash = "sha256:67b2ad2ad54c72ca6d04975a9b2df8c3638c34ddd5b28738e94fc2b57929d378", size = 30774447, upload-time = "2026-06-19T15:01:43.456Z" }
 wheels = [
